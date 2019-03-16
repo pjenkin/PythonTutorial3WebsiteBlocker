@@ -2,7 +2,7 @@ import time
 from datetime import datetime as dt     # shortened name as expressions could be fairly long
 
 # using website_blocker.bat
-# Task scheduler - run with highest provileges - new Trigger: At startup, new Action: Start a program
+# Task scheduler - run with highest privileges - new Trigger: At startup, new Action: Start a program
 # - select website_blocker.pyw - NB path in code to any files should be absolute, not local/relative as
 # Task Scheduler paths apply - pythonw.exe should be in processes if running
 # Task Scheduler task exported as XML "Run Website Blocker.xml"

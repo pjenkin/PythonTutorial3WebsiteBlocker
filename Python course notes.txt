@@ -375,8 +375,19 @@ will go through each website of website_list (using inner 'for' loop), and 'any'
 
 file.seek(0) and file.truncate()
 run cmd as Admin  to get permission to alter hosts after changing path back to real hosts (not temporary)
+9-139 Windows - Pythonw.exe can run .pyw files in the background on Windows - 
+Task scheduler - run with highest privileges - new Trigger: At startup, new Action: Start a program - select website_blocker.pyw - NB path in code to any files should be absolute, not local/relative as Task Scheduler paths apply - pythonw.exe should be in processes if running
+use batch/.bat file e.g.
+REM https://www.udemy.com/the-python-mega-course/learn/v4/questions/6644797
+start pythonw "C:\Users\peter.DESKTOP-3GCVT7E\source\repos\Python\python mega course\3WebsiteBlocker\website_blocker.pyw"  1>stdout.txt 2>stderr.txt
+REM https://stackoverflow.com/a/30310192 - '>' for error output
+REM https://stackoverflow.com/a/46936512 - 'start' to close terminal window
+
+9-140 Cron for Linux or Mac - add entry to cron table - 'sudo crontab -e' - e.g. @reboot python3 /home/adi/applications/website_blocker.py - NB not pyw - NB if sudo not used, a different file will be seen - use absolute paths in code
+9-141 PythonAnywhere for regular cron/python processing jobs 24-7 e.g. fetching from API, daily number crunching &c
 
 
+TODO: IDLE IDE
 
 =======================================
 NB remember to activate virtualenv with activate script and pip3 install from Scripts directory in terminal window from PyCharm
