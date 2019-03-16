@@ -16,7 +16,8 @@ while True:
             < dt(dt.now().year, dt.now().month, dt.now().day, working_hours_finish):
         # is time between working time start and working time finish?
         print('In working hours')        # just to illustrate working loop
-        with open(hosts_temp_path,'r+') as file:
+        # with open(hosts_temp_path,'r+') as file:
+        with open(hosts_path,'r+') as file:
             content = file.read()
             print(content)      # diagnostic
             for website in website_list:
